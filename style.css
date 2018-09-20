@@ -55,8 +55,14 @@ body {
   max-width: 1170px;
   margin: auto;
 }
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .section {
-  min-height: 900px;
+  height: 100vh;
+  max-height: 900px;
   position: relative;
 }
 .logo {
@@ -106,13 +112,80 @@ body {
   font-weight: 300;
   line-height: normal;
 }
+.section1 .advantages {
+  display: flex;
+  margin-top: auto;
+  padding-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .section1 .advantages {
+    padding-bottom: 68px;
+  }
+}
+.section1 .item {
+  flex-grow: 1;
+  flex-shrink: 0;
+  width: 20%;
+}
+.section1 .icon-wrap {
+  width: 50px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+  .section1 .icon-wrap {
+    margin-bottom: 20px;
+  }
+}
+.section1 .text {
+  font-weight: 300;
+  line-height: normal;
+  font-size: 16px;
+  color: #fff;
+}
+.section2 {
+  background: url("images/bg2.png") no-repeat 0 0;
+  background-size: cover;
+}
+.section3 {
+  background: url("images/bg3.png") no-repeat 0 0;
+  background-size: cover;
+}
+.section4 {
+  background: url("images/bg4.png") no-repeat 0 0;
+  background-size: cover;
+}
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 100%;
+  height: 100%;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+}
+.title1 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+  .title1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+}
+.title2 {
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (min-width: 992px) {
+  .title2 {
+    font-size: 68px;
+  }
 }
 .site-header {
   background: #b6dd33;
@@ -120,4 +193,4 @@ body {
 .site-footer {
   background: #000;
 }
-/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22%5C%2F%22%2C%22sources%22%3A%5B%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fstyle.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2F_normalize.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_layout.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_header.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_footer.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAD%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BGAAA%3BACAA%3BAAAA%3B%3B%3B%3B%3B2BAAA%3BAAAA%3BADAA%2CiDAAA%3BACqBC%3BAAAA%2CiBAAA%3BAAAA%3BAAIA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAKA%3BAAAA%2CmBAAA%3BAAAA%3BAAGA%3BAAAA%2CeAAA%3BAAAA%3BAAGA%3BAAAA%3BgBAAA%3BAAAA%3BAAKA%3BAAAA%3BoBAAA%3BAAAA%3BACzCD%3BAAAA%2CoCAAA%3BAAAA%3BAAIC%3BAAAA%3B%3BeAAA%3BAAAA%3BAAUA%3BAAAA%3BqBAAA%3BAAAA%3BAAKA%3BAAAA%3B%3B%3BmBAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%2CqBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3BsBAAA%3BAAAA%3BAAKA%3BAAAA%3ByBAAA%3BAAAA%3BAAIE%3BAAAA%3B%3B%3B%3B%3B%3BmBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%2CsBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAASF%3BAAAA%3B%3B%3B%3B%3BqBAAA%3BAAAA%3BACpED%3BAAAA%2CsBAAA%3BAAAA%3BACAA%3BAAAA%2CmBAAA%3BAAAA%22%7D */
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22%5C%2F%22%2C%22sources%22%3A%5B%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fstyle.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2F_normalize.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_layout.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_header.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_footer.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAD%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BGAAA%3BACAA%3BAAAA%3B%3B%3B%3B%3B2BAAA%3BAAAA%3BADAA%2CiDAAA%3BACqBC%3BAAAA%2CiBAAA%3BAAAA%3BAAIA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAKA%3BAAAA%2CmBAAA%3BAAAA%3BAAGA%3BAAAA%2CeAAA%3BAAAA%3BAAGA%3BAAAA%3BgBAAA%3BAAAA%3BAAKA%3BAAAA%3BoBAAA%3BAAAA%3BACzCD%3BAAAA%2CoCAAA%3BAAAA%3BAAIC%3BAAAA%3B%3BeAAA%3BAAAA%3BAAMA%3BAAAA%3B%3BeAAA%3BAAAA%3BAAUA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3BmBAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%2CqBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3BsBAAA%3BAAAA%3BAAKA%3BAAAA%3ByBAAA%3BAAAA%3BAAIE%3BAAAA%3B%3B%3B%3B%3B%3BmBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%2CsBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAQA%3BAAAA%3B%3BuBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%2CyBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3BaAAA%3BAAAA%3BAAMA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3BcAAA%3BAAAA%3BAAQF%3BAAAA%3ByBAAA%3BAAAA%3BAAKA%3BAAAA%3ByBAAA%3BAAAA%3BAAKA%3BAAAA%3ByBAAA%3BAAAA%3BAAKA%3BAAAA%3B%3B%3B%3B%3BqBAAA%3BAAAA%3BAASA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%3BwBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B4BAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%2CoBAAA%3BAAAA%3BAAAA%3BACvJH%3BAAAA%2CsBAAA%3BAAAA%3BACAA%3BAAAA%2CmBAAA%3BAAAA%22%7D */

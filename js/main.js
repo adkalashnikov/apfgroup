@@ -1,10 +1,14 @@
 ( function( $ ) {
 
-    $('#modalContact').on('show.bs.modal', function (e) {
-            $('body').addClass('slide-in');
-        }).on('hide.bs.modal', function (e) {
-            $('body').removeClass('slide-in');
-        })
-    ;
+    let width = $(document).width();
+
+    if(width > 1199) {
+        $(function() {
+            $.scrollify({
+                section : ".section",
+                updateHash: false,
+            });
+        });
+    }
 
 } )( jQuery );

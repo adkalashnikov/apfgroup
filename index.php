@@ -19,6 +19,16 @@ get_header();
     <div class="container flex-col">
         <div class="section-header">
             <div class="logo"></div>
+            <div class="right">
+                <a href="tel:+380505728797">
+                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                    +38 (050) 572-87-97
+                </a>
+                <span>
+                    Осуществляем поставки печного <br>
+                    топлива по всей территории Украины
+                </span>
+            </div>
         </div>
 
         <div>
@@ -63,6 +73,16 @@ get_header();
     <div class="container">
         <div class="section-header">
             <div class="logo"></div>
+            <div class="right">
+                <a href="tel:+380505728797">
+                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                    +38 (050) 572-87-97
+                </a>
+                <span>
+                    Осуществляем поставки печного <br>
+                    топлива по всей территории Украины
+                </span>
+            </div>
         </div>
 
         <div class="title1">
@@ -82,6 +102,16 @@ get_header();
     <div class="container">
         <div class="section-header">
             <div class="logo"></div>
+            <div class="right">
+                <a href="tel:+380505728797">
+                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                    +38 (050) 572-87-97
+                </a>
+                <span>
+                    Осуществляем поставки печного <br>
+                    топлива по всей территории Украины
+                </span>
+            </div>
         </div>
 
         <div class="title1">
@@ -101,6 +131,16 @@ get_header();
     <div class="container">
         <div class="section-header">
             <div class="logo"></div>
+            <div class="right">
+                <a href="tel:+380505728797">
+                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                    +38 (050) 572-87-97
+                </a>
+                <span>
+                    Осуществляем поставки печного <br>
+                    топлива по всей территории Украины
+                </span>
+            </div>
         </div>
 
         <div class="title1">

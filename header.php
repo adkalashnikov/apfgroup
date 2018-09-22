@@ -21,5 +21,5 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<div id="content" class="site-content">
+
+<svg class="icon icon-contact-btn" data-toggle="modal" data-target="#modalContact"><use xlink:href="#icon-contact-btn"></use></svg>

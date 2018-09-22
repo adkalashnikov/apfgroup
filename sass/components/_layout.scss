@@ -1,5 +1,14 @@
 body {
   font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease-out;
+
+  &.slide-in {
+    transform: translateX(-100%);
+
+    @media (min-width: 455px) {
+      transform: translateX(-455px)
+    }
+  }
 }
 
 .container {
@@ -19,9 +28,10 @@ body {
 //}
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   max-height: 900px;
   position: relative;
+  display: flex;
 }
 
 .logo {
@@ -76,6 +86,8 @@ body {
     display: flex;
     margin-top: auto;
     padding-bottom: 30px;
+    padding-top: 30px;
+    flex-wrap: wrap;
 
     @media (min-width: 992px) {
       padding-bottom: 68px;
@@ -85,7 +97,13 @@ body {
   .item {
     flex-grow: 1;
     flex-shrink: 0;
-    width: 20%;
+    flex-basis: 150px;
+    margin-bottom: 15px;
+
+    @media (min-width: 992px) {
+      flex-basis: 20%;
+      margin-bottom: 0;
+    }
   }
 
   .icon-wrap {

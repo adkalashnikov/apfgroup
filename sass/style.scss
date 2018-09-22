@@ -21,6 +21,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 @import "normalize";
-@import "components/_layout";
+@import "components/layout";
+@import "components/modal";
+@import "components/forms";
 @import "components/header";
 @import "components/footer";

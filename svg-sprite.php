@@ -169,5 +169,11 @@
 			<path fill="#fff" style="fill: var(--color1, #fff)" d="M4.689 4.975l0.286-0.286 5.728 5.728-0.286 0.286-5.728-5.728z"></path>
 			<path fill="#fff" style="fill: var(--color1, #fff)" d="M10.417 4.689l0.286 0.286-5.728 5.728-0.286-0.286 5.728-5.728z"></path>
 		</symbol>
+        <symbol id="icon-close" viewBox="0 0 32 32">
+            <title>close</title>
+            <path fill="#256ccc" style="fill: var(--color1, #256ccc)" d="M0 0h32v32h-32v-32z"></path>
+            <path fill="#fff" style="fill: var(--color2, #fff)" d="M21.474 10.024l0.545 0.545-11.45 11.45-0.545-0.545 11.45-11.45z"></path>
+            <path fill="#fff" style="fill: var(--color2, #fff)" d="M22.019 21.474l-0.545 0.545-11.45-11.45 0.545-0.545 11.45 11.45z"></path>
+        </symbol>
 	</defs>
 </svg>

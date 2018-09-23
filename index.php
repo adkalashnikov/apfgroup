@@ -113,7 +113,7 @@ get_header();
 				<?php } ?>
                 <div class="price-currency">грн/литр</div>
             </div>
-            <div class="more">
+            <div class="more" data-toggle="modal" data-target="#modalFuel">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>
@@ -130,7 +130,7 @@ get_header();
 				<?php } ?>
                 <div class="price-currency">грн/литр</div>
             </div>
-            <div class="more">
+            <div class="more" data-toggle="modal" data-target="#modalFuel">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>
@@ -147,7 +147,7 @@ get_header();
 				<?php } ?>
                 <div class="price-currency">грн/литр</div>
             </div>
-            <div class="more">
+            <div class="more" data-toggle="modal" data-target="#modalFuel">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>
@@ -164,7 +164,7 @@ get_header();
 				<?php } ?>
                 <div class="price-currency">грн/литр</div>
             </div>
-            <div class="more">
+            <div class="more" data-toggle="modal" data-target="#modalFuel">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>
@@ -181,7 +181,7 @@ get_header();
 				<?php } ?>
                 <div class="price-currency">грн/литр</div>
             </div>
-            <div class="more">
+            <div class="more" data-toggle="modal" data-target="#modalFuel">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>

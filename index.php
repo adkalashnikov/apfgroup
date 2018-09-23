@@ -85,15 +85,105 @@ get_header();
             </div>
         </div>
 
-        <div class="title1">
-	        <?php if( get_field('s1-t1') ) {
-		        the_field('s1-t1');
-	        } ?>
+        <div class="title-wrapper">
+            <div class="title1">
+		        <?php if( get_field('s2-t1') ) {
+			        the_field('s2-t1');
+		        } ?>
+            </div>
+            <div class="title2">
+		        <?php if( get_field('s2-t2') ) {
+			        the_field('s2-t2');
+		        } ?>
+            </div>
         </div>
-        <div class="title2">
-	        <?php if( get_field('s1-t1') ) {
-		        the_field('s1-t1');
-	        } ?>
+    </div>
+
+    <div class="fuel-cards">
+        <div class="card">
+            <div class="title">
+				<?php if( get_field('s2-item1-title') ) {
+					the_field('s2-item1-title');
+				} ?>
+            </div>
+            <div class="price">
+                <div>от</div>
+				<?php if( get_field('s2-item1-price') ) { ?>
+                    <span><?php the_field('s2-item1-price'); ?></span>
+				<?php } ?>
+                <div class="price-currency">грн/литр</div>
+            </div>
+            <div class="more">
+                Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
+            </div>
+        </div>
+        <div class="card">
+            <div class="title">
+				<?php if( get_field('s2-item2-title') ) {
+					the_field('s2-item2-title');
+				} ?>
+            </div>
+            <div class="price">
+                <div>от</div>
+				<?php if( get_field('s2-item2-price') ) { ?>
+                    <span><?php the_field('s2-item2-price'); ?></span>
+				<?php } ?>
+                <div class="price-currency">грн/литр</div>
+            </div>
+            <div class="more">
+                Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
+            </div>
+        </div>
+        <div class="card">
+            <div class="title">
+				<?php if( get_field('s2-item3-title') ) {
+					the_field('s2-item3-title');
+				} ?>
+            </div>
+            <div class="price">
+                <div>от</div>
+				<?php if( get_field('s2-item3-price') ) { ?>
+                    <span><?php the_field('s2-item3-price'); ?></span>
+				<?php } ?>
+                <div class="price-currency">грн/литр</div>
+            </div>
+            <div class="more">
+                Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
+            </div>
+        </div>
+        <div class="card">
+            <div class="title">
+				<?php if( get_field('s2-item4-title') ) {
+					the_field('s2-item4-title');
+				} ?>
+            </div>
+            <div class="price">
+                <div>от</div>
+				<?php if( get_field('s2-item4-price') ) { ?>
+                    <span><?php the_field('s2-item4-price'); ?></span>
+				<?php } ?>
+                <div class="price-currency">грн/литр</div>
+            </div>
+            <div class="more">
+                Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
+            </div>
+        </div>
+        <div class="card">
+            <div class="title">
+				<?php if( get_field('s2-item5-title') ) {
+					the_field('s2-item5-title');
+				} ?>
+            </div>
+            <div class="price">
+                <div>от</div>
+				<?php if( get_field('s2-item5-price') ) { ?>
+                    <span><?php the_field('s2-item5-price'); ?></span>
+				<?php } ?>
+                <div class="price-currency">грн/литр</div>
+            </div>
+            <div class="more">
+                Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
+            </div>
         </div>
     </div>
 </section>
@@ -114,15 +204,56 @@ get_header();
             </div>
         </div>
 
-        <div class="title1">
-            <?php if( get_field('s1-t1') ) {
-                the_field('s1-t1');
-            } ?>
+        <div class="title-wrapper">
+            <div class="title1">
+		        <?php if( get_field('s3-t1') ) {
+			        the_field('s3-t1');
+		        } ?>
+            </div>
+            <div class="title2">
+		        <?php if( get_field('s3-t2') ) {
+			        the_field('s3-t2');
+		        } ?>
+            </div>
         </div>
-        <div class="title2">
-            <?php if( get_field('s1-t1') ) {
-                the_field('s1-t1');
-            } ?>
+
+        <div class="advantages">
+            <div class="item">
+                <div class="icon-wrap"><svg class="icon icon-icon5"><use xlink:href="#icon-icon5"></use></svg></div>
+                <div class="title">ДОСТАВКА</div>
+                <p>
+	                <?php if( get_field('s3-item1') ) {
+		                the_field('s3-item1');
+	                } ?>
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon-wrap"><svg class="icon icon-icon2"><use xlink:href="#icon-icon2"></use></svg></div>
+                <div class="title">КАЧЕСТВО</div>
+                <p>
+		            <?php if( get_field('s3-item2') ) {
+			            the_field('s3-item2');
+		            } ?>
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon-wrap"><svg class="icon icon-icon3"><use xlink:href="#icon-icon3"></use></svg></div>
+                <div class="title">СТОИМОСТЬ</div>
+                <p>
+		            <?php if( get_field('s3-item3') ) {
+			            the_field('s3-item3');
+		            } ?>
+                </p>
+            </div>
+            <div class="item">
+                <div class="icon-wrap"><svg class="icon icon-icon1"><use xlink:href="#icon-icon1"></use></svg></div>
+                <div class="title">СОТРУДНИЧЕСТВО</div>
+                <p>
+		            <?php if( get_field('s3-item4') ) {
+			            the_field('s3-item4');
+		            } ?>
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -143,17 +274,108 @@ get_header();
             </div>
         </div>
 
-        <div class="title1">
-            <?php if( get_field('s1-t1') ) {
-                the_field('s1-t1');
-            } ?>
+        <div class="title-wrapper">
+            <div class="title1">
+			    <?php if( get_field('s4-t1') ) {
+				    the_field('s4-t1');
+			    } ?>
+            </div>
+            <div class="title2">
+			    <?php if( get_field('s4-t2') ) {
+				    the_field('s4-t2');
+			    } ?>
+            </div>
         </div>
-        <div class="title2">
-            <?php if( get_field('s1-t1') ) {
-                the_field('s1-t1');
-            } ?>
+
+        <div class="items-wrapper">
+            <div class="item">
+                <div class="title">Печное топливо</div>
+                <p>
+				    <?php if( get_field('s4-item1') ) {
+					    the_field('s4-item1');
+				    } ?>
+                </p>
+            </div>
+            <div class="item">
+                <div class="title">Виды топлива</div>
+                <p>
+				    <?php if( get_field('s4-item2') ) {
+					    the_field('s4-item2');
+				    } ?>
+                </p>
+            </div>
+            <div class="item">
+                <div class="title">Где используют топливо?</div>
+                <p>
+				    <?php if( get_field('s4-item3') ) {
+					    the_field('s4-item3');
+				    } ?>
+                </p>
+            </div>
+            <div class="item">
+                <div class="title">Где купить печное топливо в Украине?</div>
+                <p>
+				    <?php if( get_field('s4-item4') ) {
+					    the_field('s4-item4');
+				    } ?>
+                </p>
+            </div>
         </div>
     </div>
+</section>
+
+<section class="section section5">
+        <div class="container">
+            <div class="section-header">
+                <div class="logo"></div>
+                <div class="right">
+                    <a href="tel:+380505728797">
+                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                        +38 (050) 572-87-97
+                    </a>
+                    <span>
+                    Осуществляем поставки печного <br>
+                    топлива по всей территории Украины
+                </span>
+                </div>
+            </div>
+
+            <div class="title-wrapper">
+                <div class="title1">
+					<?php if( get_field('s5-t1') ) {
+						the_field('s5-t1');
+					} ?>
+                </div>
+                <div class="title2">
+					<?php if( get_field('s5-t2') ) {
+						the_field('s5-t2');
+					} ?>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+	                <?php echo do_shortcode('[contact-form-7 id="5" title="форма связи"]'); ?>
+                </div>
+                <div class="right">
+                    <p>
+	                    <?php if( get_field('s5-t3') ) {
+		                    the_field('s5-t3');
+	                    } ?>
+                    </p>
+
+                    <a href="tel:+380505728797" class="phone">
+                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                        +38 (050) 572-87-97
+                    </a>
+
+                    <a href="mailto:apfgrup@gmail.com" class="email">
+                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                        apfgrup@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
 </section>
 
 <?php

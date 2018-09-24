@@ -128,9 +128,9 @@ get_header();
 				<?php if( get_field('s2-item2-price') ) { ?>
                     <span><?php the_field('s2-item2-price'); ?></span>
 				<?php } ?>
-                <div class="price-currency">грн/литр</div>
+                <div class="price-currency">грн/кг</div>
             </div>
-            <div class="more" data-toggle="modal" data-target="#modalFuel">
+            <div class="more" data-toggle="modal" data-target="#modalFuelKm">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>
@@ -145,9 +145,9 @@ get_header();
 				<?php if( get_field('s2-item3-price') ) { ?>
                     <span><?php the_field('s2-item3-price'); ?></span>
 				<?php } ?>
-                <div class="price-currency">грн/литр</div>
+                <div class="price-currency">грн/кг</div>
             </div>
-            <div class="more" data-toggle="modal" data-target="#modalFuel">
+            <div class="more" data-toggle="modal" data-target="#modalFuelKmo">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>
@@ -162,9 +162,9 @@ get_header();
 				<?php if( get_field('s2-item4-price') ) { ?>
                     <span><?php the_field('s2-item4-price'); ?></span>
 				<?php } ?>
-                <div class="price-currency">грн/литр</div>
+                <div class="price-currency">грн/кг</div>
             </div>
-            <div class="more" data-toggle="modal" data-target="#modalFuel">
+            <div class="more" data-toggle="modal" data-target="#modalFuelHim">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>
@@ -179,9 +179,9 @@ get_header();
 				<?php if( get_field('s2-item5-price') ) { ?>
                     <span><?php the_field('s2-item5-price'); ?></span>
 				<?php } ?>
-                <div class="price-currency">грн/литр</div>
+                <div class="price-currency">грн/кг</div>
             </div>
-            <div class="more" data-toggle="modal" data-target="#modalFuel">
+            <div class="more" data-toggle="modal" data-target="#modalFuelNefteuglehim">
                 Подробнее <svg class="icon icon-arr-right"><use xlink:href="#icon-arr-right"></use></svg>
             </div>
         </div>
@@ -258,6 +258,60 @@ get_header();
     </div>
 </section>
 
+<section class="section section5">
+        <div class="container">
+            <div class="section-header">
+                <div class="logo"></div>
+                <div class="right">
+                    <a href="tel:+380505728797">
+                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                        +38 (050) 572-87-97
+                    </a>
+                    <span>
+                    Осуществляем поставки печного <br>
+                    топлива по всей территории Украины
+                </span>
+                </div>
+            </div>
+
+            <div class="title-wrapper">
+                <div class="title1">
+					<?php if( get_field('s5-t1') ) {
+						the_field('s5-t1');
+					} ?>
+                </div>
+                <div class="title2">
+					<?php if( get_field('s5-t2') ) {
+						the_field('s5-t2');
+					} ?>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+					<?php echo do_shortcode('[contact-form-7 id="5" title="форма связи"]'); ?>
+                </div>
+                <div class="right">
+                    <p>
+						<?php if( get_field('s5-t3') ) {
+							the_field('s5-t3');
+						} ?>
+                    </p>
+
+                    <a href="tel:+380505728797" class="phone">
+                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                        +38 (050) 572-87-97
+                    </a>
+
+                    <a href="mailto:apfgrup@gmail.com" class="email">
+                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                        apfgrup@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <section class="section section4">
     <div class="container">
         <div class="section-header">
@@ -322,60 +376,6 @@ get_header();
             </div>
         </div>
     </div>
-</section>
-
-<section class="section section5">
-        <div class="container">
-            <div class="section-header">
-                <div class="logo"></div>
-                <div class="right">
-                    <a href="tel:+380505728797">
-                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                        +38 (050) 572-87-97
-                    </a>
-                    <span>
-                    Осуществляем поставки печного <br>
-                    топлива по всей территории Украины
-                </span>
-                </div>
-            </div>
-
-            <div class="title-wrapper">
-                <div class="title1">
-					<?php if( get_field('s5-t1') ) {
-						the_field('s5-t1');
-					} ?>
-                </div>
-                <div class="title2">
-					<?php if( get_field('s5-t2') ) {
-						the_field('s5-t2');
-					} ?>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="left">
-	                <?php echo do_shortcode('[contact-form-7 id="5" title="форма связи"]'); ?>
-                </div>
-                <div class="right">
-                    <p>
-	                    <?php if( get_field('s5-t3') ) {
-		                    the_field('s5-t3');
-	                    } ?>
-                    </p>
-
-                    <a href="tel:+380505728797" class="phone">
-                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                        +38 (050) 572-87-97
-                    </a>
-
-                    <a href="mailto:apfgrup@gmail.com" class="email">
-                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                        apfgrup@gmail.com
-                    </a>
-                </div>
-            </div>
-        </div>
 </section>
 
 <?php

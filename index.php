@@ -16,6 +16,10 @@ get_header();
 ?>
 
 <section class="section section1">
+    <video class="bg-vid" poster="<?php echo get_template_directory_uri();?>/images/bg1.png" autoplay="" loop="" muted="">
+        <source src="<?php echo get_template_directory_uri();?>/video/bg1.mp4" type="video/mp4">
+    </video>
+
     <div class="container flex-col">
         <div class="section-header">
             <div class="logo"></div>

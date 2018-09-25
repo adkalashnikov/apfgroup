@@ -16,7 +16,7 @@ get_header();
 ?>
 
 <section class="section section1">
-    <video class="bg-vid" poster="<?php echo get_template_directory_uri();?>/images/bg1.png" autoplay="" loop="" muted="">
+    <video class="bg-vid" poster="<?php echo get_template_directory_uri();?>/images/vbg1.jpg" autoplay="" loop="" muted="">
         <source src="<?php echo get_template_directory_uri();?>/video/bg1.mp4" type="video/mp4">
     </video>
 
@@ -74,6 +74,10 @@ get_header();
 </section>
 
 <section class="section section2">
+    <video class="bg-vid" poster="<?php echo get_template_directory_uri();?>/images/vbg2.jpg" autoplay="" loop="" muted="">
+        <source src="<?php echo get_template_directory_uri();?>/video/bg2.mp4" type="video/mp4">
+    </video>
+
     <div class="container">
         <div class="section-header">
             <div class="logo"></div>
@@ -193,6 +197,10 @@ get_header();
 </section>
 
 <section class="section section3">
+    <video class="bg-vid" poster="<?php echo get_template_directory_uri();?>/images/vbg3.jpg" autoplay="" loop="" muted="">
+        <source src="<?php echo get_template_directory_uri();?>/video/bg3.mp4" type="video/mp4">
+    </video>
+
     <div class="container">
         <div class="section-header">
             <div class="logo"></div>
@@ -263,58 +271,62 @@ get_header();
 </section>
 
 <section class="section section5">
-        <div class="container">
-            <div class="section-header">
-                <div class="logo"></div>
-                <div class="right">
-                    <a href="tel:+380505728797">
-                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                        +38 (050) 572-87-97
-                    </a>
-                    <span>
-                    Осуществляем поставки печного <br>
-                    топлива по всей территории Украины
-                </span>
-                </div>
-            </div>
+    <video class="bg-vid" poster="<?php echo get_template_directory_uri();?>/images/vbg4.jpg" autoplay="" loop="" muted="">
+        <source src="<?php echo get_template_directory_uri();?>/video/bg4.mp4" type="video/mp4">
+    </video>
 
-            <div class="title-wrapper">
-                <div class="title1">
-					<?php if( get_field('s5-t1') ) {
-						the_field('s5-t1');
-					} ?>
-                </div>
-                <div class="title2">
-					<?php if( get_field('s5-t2') ) {
-						the_field('s5-t2');
-					} ?>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="left">
-					<?php echo do_shortcode('[contact-form-7 id="5" title="форма связи"]'); ?>
-                </div>
-                <div class="right">
-                    <p>
-						<?php if( get_field('s5-t3') ) {
-							the_field('s5-t3');
-						} ?>
-                    </p>
-
-                    <a href="tel:+380505728797" class="phone">
-                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                        +38 (050) 572-87-97
-                    </a>
-
-                    <a href="mailto:apfgrup@gmail.com" class="email">
-                        <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                        apfgrup@gmail.com
-                    </a>
-                </div>
+    <div class="container">
+        <div class="section-header">
+            <div class="logo"></div>
+            <div class="right">
+                <a href="tel:+380505728797">
+                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                    +38 (050) 572-87-97
+                </a>
+                <span>
+                Осуществляем поставки печного <br>
+                топлива по всей территории Украины
+            </span>
             </div>
         </div>
-    </section>
+
+        <div class="title-wrapper">
+            <div class="title1">
+                <?php if( get_field('s5-t1') ) {
+                    the_field('s5-t1');
+                } ?>
+            </div>
+            <div class="title2">
+                <?php if( get_field('s5-t2') ) {
+                    the_field('s5-t2');
+                } ?>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="left">
+                <?php echo do_shortcode('[contact-form-7 id="5" title="форма связи"]'); ?>
+            </div>
+            <div class="right">
+                <p>
+                    <?php if( get_field('s5-t3') ) {
+                        the_field('s5-t3');
+                    } ?>
+                </p>
+
+                <a href="tel:+380505728797" class="phone">
+                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                    +38 (050) 572-87-97
+                </a>
+
+                <a href="mailto:apfgrup@gmail.com" class="email">
+                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                    apfgrup@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="section section4">
     <div class="container">

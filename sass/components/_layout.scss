@@ -26,6 +26,7 @@ body {
 .section {
   padding-top: 1px;
   position: relative;
+  overflow: hidden;
 
   .container {
     position: relative;
@@ -202,6 +203,18 @@ body {
   flex-direction: column;
   max-height: fit-content;
 
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    opacity: .5;
+  }
+
   .title-wrapper {
     @media (min-width: 992px) {
       text-align: center;
@@ -304,6 +317,18 @@ body {
 .section3 {
   background: url("images/bg3.png") no-repeat 0 0;
   background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    opacity: .5;
+  }
 
   .container {
     max-width: 1260px;
@@ -427,6 +452,18 @@ body {
 .section5 {
   background: url("images/bg4.png") no-repeat 0 0;
   background-size: cover;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    opacity: .5;
+  }
 
   .title-wrapper {
     @media (min-width: 992px) {
@@ -564,4 +601,9 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
 }

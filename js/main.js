@@ -6,6 +6,7 @@
         $(function() {
             $.scrollify({
                 section : ".section",
+                interstitialSection : ".section",
                 updateHash: false,
             });
         });

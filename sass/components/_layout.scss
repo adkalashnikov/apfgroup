@@ -56,7 +56,7 @@ body {
 
 .section-header {
   margin-bottom: 30px;
-  padding-top: 15px;
+  padding-top: 30px;
 
   @media (min-width: 992px) {
     display: flex;
@@ -119,16 +119,18 @@ body {
   background: url("images/bg1.png") no-repeat 0 0;
   background-size: cover;
 
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: #000;
-    opacity: .5;
+  @media (min-width: 1200px) {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: #000;
+      opacity: .5;
+    }
   }
 
   h1 {
@@ -159,11 +161,11 @@ body {
     margin-top: auto;
     padding-bottom: 30px;
     padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
 
     @media (min-width: 992px) {
       padding-bottom: 68px;
-      display: flex;
-      flex-wrap: wrap;
     }
   }
 
@@ -203,16 +205,18 @@ body {
   flex-direction: column;
   max-height: fit-content;
 
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: #000;
-    opacity: .5;
+  @media (min-width: 1200px) {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: #000;
+      opacity: .5;
+    }
   }
 
   .title-wrapper {
@@ -249,6 +253,10 @@ body {
         background-color: rgba(47, 128, 237, 0.8);
         padding: 80px 40px 0 40px;
         margin-top: -20px;
+
+        .title {
+          margin-bottom: 30px;
+        }
       }
 
       .more {
@@ -256,6 +264,11 @@ body {
           display: flex;
         }
       }
+    }
+
+    @media (min-width: 600px) and (max-width: 991px) {
+      width: 50%;
+      float: left;
     }
 
     @media (min-width: 992px) {
@@ -298,11 +311,10 @@ body {
       cursor: pointer;
 
       @media (min-width: 992px) {
-        margin-top: 0;
+        margin-top: 20px;
         position: absolute;
         display: none;
         left: 40px;
-        bottom: 35px;
       }
 
 
@@ -319,16 +331,18 @@ body {
   background: url("images/bg3.png") no-repeat 0 0;
   background-size: cover;
 
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: #000;
-    opacity: .5;
+  @media (min-width: 1200px) {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: #000;
+      opacity: .5;
+    }
   }
 
   .container {
@@ -344,10 +358,11 @@ body {
   }
 
   .advantages {
-    margin-top: auto;
+    margin-top: 30px;
     padding-bottom: 50px;
 
     @media (min-width: 992px) {
+      margin-top: auto;
       padding-bottom: 118px;
       display: flex;
     }
@@ -356,6 +371,11 @@ body {
   .item {
     margin-bottom: 15px;
     color: #ffffff;
+
+    @media (min-width: 600px) and (max-width: 991px) {
+      width: 50%;
+      float: left;
+    }
 
     @media (min-width: 992px) {
       flex-basis: 25%;
@@ -454,16 +474,18 @@ body {
   background: url("images/bg4.png") no-repeat 0 0;
   background-size: cover;
 
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background: #000;
-    opacity: .5;
+  @media (min-width: 1200px) {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: #000;
+      opacity: .5;
+    }
   }
 
   .title-wrapper {
@@ -475,6 +497,7 @@ body {
   }
 
   .row {
+    padding-top: 30px;
     padding-bottom: 40px;
 
     @media (min-width: 992px) {
@@ -530,6 +553,10 @@ body {
   
   .form-title {
     display: none;
+  }
+
+  .contact_form {
+    max-width: 500px;
   }
   
   input {

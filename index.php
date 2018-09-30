@@ -329,6 +329,10 @@ get_header();
 </section>
 
 <section class="section section4">
+    <video class="bg-vid" poster="<?php echo get_template_directory_uri();?>/images/vbg5.jpg" autoplay="" loop="" muted="">
+        <source src="<?php echo get_template_directory_uri();?>/video/bg5.mp4" type="video/mp4">
+    </video>
+
     <div class="container">
         <div class="section-header">
             <div class="logo"></div>

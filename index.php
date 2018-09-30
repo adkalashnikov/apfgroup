@@ -363,7 +363,6 @@ get_header();
 
         <div class="items-wrapper">
             <div class="item">
-                <div class="title">Печное топливо</div>
                 <p>
 				    <?php if( get_field('s4-item1') ) {
 					    the_field('s4-item1');
@@ -371,7 +370,6 @@ get_header();
                 </p>
             </div>
             <div class="item">
-                <div class="title">Виды топлива</div>
                 <p>
 				    <?php if( get_field('s4-item2') ) {
 					    the_field('s4-item2');
@@ -379,7 +377,6 @@ get_header();
                 </p>
             </div>
             <div class="item">
-                <div class="title">Где используют топливо?</div>
                 <p>
 				    <?php if( get_field('s4-item3') ) {
 					    the_field('s4-item3');
@@ -387,11 +384,18 @@ get_header();
                 </p>
             </div>
             <div class="item">
-                <div class="title">Где купить печное топливо в Украине?</div>
                 <p>
 				    <?php if( get_field('s4-item4') ) {
 					    the_field('s4-item4');
 				    } ?>
+                </p>
+            </div>
+
+            <div class="item-bottom">
+                <p>
+		            <?php if( get_field('s4-item5') ) {
+			            the_field('s4-item5');
+		            } ?>
                 </p>
             </div>
         </div>

@@ -35,7 +35,7 @@ body {
 
   @media (min-width: 992px) {
     min-height: 100vh;
-    max-height: 900px;
+    max-height: fit-content;
     position: relative;
     display: flex;
     padding: 0;
@@ -203,7 +203,6 @@ body {
   background: url("images/bg2.png") no-repeat 0 0;
   background-size: cover;
   flex-direction: column;
-  max-height: fit-content;
 
   @media (min-width: 1200px) {
     &:before {
@@ -239,10 +238,13 @@ body {
   }
 
   .card {
-    padding: 40px 20px;
+    padding: 20px;
     background-color: rgba(75, 75, 75, 0.8);
     color: #ffffff;
     position: relative;
+    transition: margin .3s ease-in-out;
+
+    @media (min-width: 992px) {}
     
     &:nth-child(even){
       background-color: rgba(46, 46, 46, 0.8);
@@ -251,7 +253,6 @@ body {
     &:hover {
       @media (min-width: 992px) {
         background-color: rgba(47, 128, 237, 0.8);
-        padding: 80px 40px 0 40px;
         margin-top: -20px;
 
         .title {
@@ -261,12 +262,13 @@ body {
 
       .more {
         @media (min-width: 992px) {
-          display: flex;
+          visibility: visible;
         }
       }
     }
 
     @media (min-width: 600px) and (max-width: 991px) {
+      padding: 40px 20px;
       width: 50%;
       float: left;
     }
@@ -276,34 +278,50 @@ body {
       flex-shrink: 0;
       width: 20%;
       padding: 80px 40px 105px 40px;
+      min-height: 51vh;
+      max-height: 465px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .title {
-      font-size: 22px;
+      font-size: 16px;
       font-weight: 500;
-      line-height: 26px;
+      line-height: 16px;
       margin-bottom: 20px;
       text-transform: uppercase;
 
       @media (min-width: 992px) {
         margin-bottom: 70px;
+        font-size: 22px;
+        line-height: 26px;
       }
     }
 
     .price {
       font-weight: 300;
-      font-size: 24px;
+      font-size: 16px;
+
+      @media (min-width: 992px) {
+        font-size: 24px;
+      }
 
       span {
-        font-size: 56px;
+        font-size: 22px;
         font-weight: 500;
-        line-height: 66px;
+        line-height: 26px;
+
+        @media (min-width: 992px) {
+          font-size: 56px;
+          line-height: 66px;
+        }
       }
     }
 
     .more {
       display: flex;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 300;
       line-height: 21px;
       align-items: center;
@@ -311,10 +329,8 @@ body {
       cursor: pointer;
 
       @media (min-width: 992px) {
-        margin-top: 20px;
-        position: absolute;
-        display: none;
-        left: 40px;
+        visibility: hidden;
+        font-size: 18px;
       }
 
 
@@ -416,7 +432,6 @@ body {
 .section4 {
   background: url("images/bg4.png") no-repeat 0 0;
   background-size: cover;
-  min-height: fit-content;
 
   .container {
     max-width: 1260px;
@@ -539,25 +554,35 @@ body {
 
       p {
         color: #ffffff;
-        font-size: 22px;
+        font-size: 16px;
         font-weight: 300;
-        line-height: 26px;
+
+        @media (min-width: 992px) {
+          font-size: 22px;
+          line-height: 26px;
+        }
       }
 
       .icon {
         width: 32px;
         height: 32px;
         margin-right: 12px;
+        flex-shrink: 0;
       }
 
-      a {
+      a,
+      span {
         color: #ffffff;
-        font-size: 28px;
-        font-weight: 300;
-        line-height: 33px;
+        font-size: 16px;
+        font-weight: 100;
         text-decoration: none;
         display: flex;
         align-items: center;
+
+        @media (min-width: 992px) {
+          font-size: 28px;
+          line-height: 33px;
+        }
       }
 
       .phone {
@@ -565,6 +590,14 @@ body {
 
         @media (min-width: 992px) {
           margin: 42px 0 35px 0;
+        }
+      }
+
+      .addr {
+        margin: 0 0 15px 0;
+
+        @media (min-width: 992px) {
+          margin: 0 0 35px 0;
         }
       }
     }

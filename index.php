@@ -24,9 +24,9 @@ get_header();
         <div class="section-header">
             <div class="logo"></div>
             <div class="right">
-                <a href="tel:+380505728797">
+                <a href="tel:+380504400727">
                     <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 572-87-97
+                    +38 (050) 440-07-27
                 </a>
                 <span>
                     Осуществляем поставки печного <br>
@@ -82,9 +82,9 @@ get_header();
         <div class="section-header">
             <div class="logo"></div>
             <div class="right">
-                <a href="tel:+380505728797">
+                <a href="tel:+380504400727">
                     <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 572-87-97
+                    +38 (050) 440-07-27
                 </a>
                 <span>
                     Осуществляем поставки печного <br>
@@ -205,9 +205,9 @@ get_header();
         <div class="section-header">
             <div class="logo"></div>
             <div class="right">
-                <a href="tel:+380505728797">
+                <a href="tel:+380504400727">
                     <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 572-87-97
+                    +38 (050) 440-07-27
                 </a>
                 <span>
                     Осуществляем поставки печного <br>
@@ -279,9 +279,9 @@ get_header();
         <div class="section-header">
             <div class="logo"></div>
             <div class="right">
-                <a href="tel:+380505728797">
+                <a href="tel:+380504400727">
                     <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 572-87-97
+                    +38 (050) 440-07-27
                 </a>
                 <span>
                 Осуществляем поставки печного <br>
@@ -314,13 +314,18 @@ get_header();
                     } ?>
                 </p>
 
-                <a href="tel:+380505728797" class="phone">
+                <span class="phone">
                     <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 572-87-97
-                </a>
+                    (050) 440-07-27, (050) 572-87-97
+                </span>
+
+                <span class="addr">
+                    <svg class="icon icon-marker"><use xlink:href="#icon-marker"></use></svg>
+                    г. Черкассы, ул. Чехова, 115
+                </span>
 
                 <a href="mailto:apfgrup@gmail.com" class="email">
-                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
+                    <svg class="icon icon-mail2"><use xlink:href="#icon-mail2"></use></svg>
                     apfgrup@gmail.com
                 </a>
             </div>
@@ -337,9 +342,9 @@ get_header();
         <div class="section-header">
             <div class="logo"></div>
             <div class="right">
-                <a href="tel:+380505728797">
+                <a href="tel:+380504400727">
                     <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 572-87-97
+                    +38 (050) 440-07-27
                 </a>
                 <span>
                     Осуществляем поставки печного <br>
@@ -370,25 +375,19 @@ get_header();
                 </p>
             </div>
             <div class="item">
-                <p>
-				    <?php if( get_field('s4-item2') ) {
-					    the_field('s4-item2');
-				    } ?>
-                </p>
+	            <?php if( get_field('s4-item2') ) {
+		            the_field('s4-item2');
+	            } ?>
             </div>
             <div class="item">
-                <p>
-				    <?php if( get_field('s4-item3') ) {
-					    the_field('s4-item3');
-				    } ?>
-                </p>
+	            <?php if( get_field('s4-item3') ) {
+		            the_field('s4-item3');
+	            } ?>
             </div>
             <div class="item">
-                <p>
-				    <?php if( get_field('s4-item4') ) {
-					    the_field('s4-item4');
-				    } ?>
-                </p>
+	            <?php if( get_field('s4-item4') ) {
+		            the_field('s4-item4');
+	            } ?>
             </div>
 
             <div class="item-bottom">

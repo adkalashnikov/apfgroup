@@ -1,8 +1,9 @@
 ( function( $ ) {
 
-    let width = $(document).width();
+    let width = $(window).width();
+    let height = $(window).height();
 
-    if(width > 1199) {
+    if(width > 1280 && height > 900) {
         $(function() {
             $.scrollify({
                 section : ".section",

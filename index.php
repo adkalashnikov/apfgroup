@@ -21,19 +21,7 @@ get_header();
     </video>
 
     <div class="container flex-col">
-        <div class="section-header">
-            <div class="logo"></div>
-            <div class="right">
-                <a href="tel:+380504400727">
-                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 440-07-27
-                </a>
-                <span>
-                    Осуществляем поставки печного <br>
-                    топлива по всей территории Украины
-                </span>
-            </div>
-        </div>
+        <?php get_template_part('inc/section-header' ); ?>
 
         <div>
             <h1>
@@ -79,19 +67,7 @@ get_header();
     </video>
 
     <div class="container">
-        <div class="section-header">
-            <div class="logo"></div>
-            <div class="right">
-                <a href="tel:+380504400727">
-                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 440-07-27
-                </a>
-                <span>
-                    Осуществляем поставки печного <br>
-                    топлива по всей территории Украины
-                </span>
-            </div>
-        </div>
+	    <?php get_template_part('inc/section-header' ); ?>
 
         <div class="title-wrapper">
             <div class="title1">
@@ -202,19 +178,7 @@ get_header();
     </video>
 
     <div class="container">
-        <div class="section-header">
-            <div class="logo"></div>
-            <div class="right">
-                <a href="tel:+380504400727">
-                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 440-07-27
-                </a>
-                <span>
-                    Осуществляем поставки печного <br>
-                    топлива по всей территории Украины
-                </span>
-            </div>
-        </div>
+	    <?php get_template_part('inc/section-header' ); ?>
 
         <div class="title-wrapper">
             <div class="title1">
@@ -276,19 +240,7 @@ get_header();
     </video>
 
     <div class="container">
-        <div class="section-header">
-            <div class="logo"></div>
-            <div class="right">
-                <a href="tel:+380504400727">
-                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 440-07-27
-                </a>
-                <span>
-                Осуществляем поставки печного <br>
-                топлива по всей территории Украины
-            </span>
-            </div>
-        </div>
+	    <?php get_template_part('inc/section-header' ); ?>
 
         <div class="title-wrapper">
             <div class="title1">
@@ -339,19 +291,7 @@ get_header();
     </video>
 
     <div class="container">
-        <div class="section-header">
-            <div class="logo"></div>
-            <div class="right">
-                <a href="tel:+380504400727">
-                    <svg class="icon icon-icon-call"><use xlink:href="#icon-icon-call"></use></svg>
-                    +38 (050) 440-07-27
-                </a>
-                <span>
-                    Осуществляем поставки печного <br>
-                    топлива по всей территории Украины
-                </span>
-            </div>
-        </div>
+	    <?php get_template_part('inc/section-header' ); ?>
 
         <div class="title-wrapper">
             <div class="title1">
@@ -396,6 +336,7 @@ get_header();
 			            the_field('s4-item5');
 		            } ?>
                 </p>
+                <p><a href="https://freelancehunt.com/freelancer/Murzak.html" target="_blank" class="copy-link">design by murzak</a></p>
             </div>
         </div>
     </div>

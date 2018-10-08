@@ -67,6 +67,7 @@ body {
 .section {
   padding-top: 1px;
   position: relative;
+  overflow: hidden;
 }
 .section .container {
   position: relative;
@@ -75,7 +76,7 @@ body {
 @media (min-width: 992px) {
   .section {
     min-height: 100vh;
-    max-height: 900px;
+    max-height: fit-content;
     position: relative;
     display: flex;
     padding: 0;
@@ -95,7 +96,7 @@ body {
 }
 .section-header {
   margin-bottom: 30px;
-  padding-top: 15px;
+  padding-top: 30px;
 }
 @media (min-width: 992px) {
   .section-header {
@@ -115,6 +116,19 @@ body {
     margin: 0 0 0 auto;
   }
 }
+.section-header .right .phones {
+  display: flex;
+  align-items: center;
+}
+.section-header .right .phone2 {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .section-header .right .phone2 {
+    display: block;
+    margin-left: 30px;
+  }
+}
 .section-header .right .icon-icon-call {
   width: 22px;
   height: 22px;
@@ -131,8 +145,6 @@ body {
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
-  display: flex;
-  align-items: center;
 }
 @media (min-width: 992px) {
   .section-header .right a {
@@ -158,16 +170,18 @@ body {
   background: url("images/bg1.png") no-repeat 0 0;
   background-size: cover;
 }
-.section1:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: #000;
-  opacity: 0.5;
+@media (min-width: 1200px) {
+  .section1:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    opacity: 0.5;
+  }
 }
 .section1 h1 {
   font-size: 22px;
@@ -196,12 +210,12 @@ body {
   margin-top: auto;
   padding-bottom: 30px;
   padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 @media (min-width: 992px) {
   .section1 .advantages {
     padding-bottom: 68px;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
 .section1 .item {
@@ -236,7 +250,19 @@ body {
   background: url("images/bg2.png") no-repeat 0 0;
   background-size: cover;
   flex-direction: column;
-  max-height: fit-content;
+}
+@media (min-width: 1200px) {
+  .section2:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    opacity: 0.5;
+  }
 }
 @media (min-width: 992px) {
   .section2 .title-wrapper {
@@ -248,6 +274,7 @@ body {
 .section2 .fuel-cards {
   margin-top: auto;
   padding-top: 30px;
+  z-index: 2;
 }
 @media (min-width: 992px) {
   .section2 .fuel-cards {
@@ -256,10 +283,11 @@ body {
   }
 }
 .section2 .card {
-  padding: 40px 20px;
+  padding: 20px;
   background-color: rgba(75, 75, 75, 0.8);
   color: #fff;
   position: relative;
+  transition: margin 0.3s ease-in-out;
 }
 .section2 .card:nth-child(even) {
   background-color: rgba(46, 46, 46, 0.8);
@@ -267,13 +295,22 @@ body {
 @media (min-width: 992px) {
   .section2 .card:hover {
     background-color: rgba(47, 128, 237, 0.8);
-    padding: 80px 40px 0 40px;
     margin-top: -20px;
+  }
+  .section2 .card:hover .title {
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 992px) {
   .section2 .card:hover .more {
-    display: flex;
+    visibility: visible;
+  }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .section2 .card {
+    padding: 40px 20px;
+    width: 50%;
+    float: left;
   }
 }
 @media (min-width: 992px) {
@@ -282,32 +319,50 @@ body {
     flex-shrink: 0;
     width: 20%;
     padding: 80px 40px 105px 40px;
+    min-height: 51vh;
+    max-height: 465px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 .section2 .card .title {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 16px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 @media (min-width: 992px) {
   .section2 .card .title {
     margin-bottom: 70px;
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 .section2 .card .price {
   font-weight: 300;
-  font-size: 24px;
+  font-size: 16px;
+}
+@media (min-width: 992px) {
+  .section2 .card .price {
+    font-size: 24px;
+  }
 }
 .section2 .card .price span {
-  font-size: 56px;
+  font-size: 22px;
   font-weight: 500;
-  line-height: 66px;
+  line-height: 26px;
+}
+@media (min-width: 992px) {
+  .section2 .card .price span {
+    font-size: 56px;
+    line-height: 66px;
+  }
 }
 .section2 .card .more {
   display: flex;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 21px;
   align-items: center;
@@ -316,11 +371,8 @@ body {
 }
 @media (min-width: 992px) {
   .section2 .card .more {
-    margin-top: 0;
-    position: absolute;
-    display: none;
-    left: 40px;
-    bottom: 35px;
+    visibility: hidden;
+    font-size: 18px;
   }
 }
 .section2 .card .more .icon {
@@ -331,6 +383,19 @@ body {
 .section3 {
   background: url("images/bg3.png") no-repeat 0 0;
   background-size: cover;
+}
+@media (min-width: 1200px) {
+  .section3:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    opacity: 0.5;
+  }
 }
 .section3 .container {
   max-width: 1260px;
@@ -343,11 +408,12 @@ body {
   }
 }
 .section3 .advantages {
-  margin-top: auto;
+  margin-top: 30px;
   padding-bottom: 50px;
 }
 @media (min-width: 992px) {
   .section3 .advantages {
+    margin-top: auto;
     padding-bottom: 118px;
     display: flex;
   }
@@ -355,6 +421,12 @@ body {
 .section3 .item {
   margin-bottom: 15px;
   color: #fff;
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .section3 .item {
+    width: 50%;
+    float: left;
+  }
 }
 @media (min-width: 992px) {
   .section3 .item {
@@ -393,7 +465,6 @@ body {
 .section4 {
   background: url("images/bg4.png") no-repeat 0 0;
   background-size: cover;
-  min-height: fit-content;
 }
 .section4 .container {
   max-width: 1260px;
@@ -413,6 +484,7 @@ body {
   .section4 .items-wrapper {
     padding-bottom: 92px;
     display: flex;
+    flex-wrap: wrap;
   }
 }
 .section4 .item {
@@ -429,7 +501,7 @@ body {
 .section4 .item .title {
   font-size: 16px;
   line-height: 19px;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -442,10 +514,46 @@ body {
   font-size: 14px;
   font-weight: 300;
   line-height: 19px;
+  margin-bottom: 18px;
+}
+.section4 .item strong {
+  font-weight: 500;
+}
+.section4 .item-bottom {
+  color: #fff;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+.section4 .item-bottom p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 19px;
+}
+.section4 .copy-link {
+  color: #fff;
+  margin-top: 20px;
+  display: inline-block;
+}
+.section4 .copy-link:hover {
+  text-decoration: none;
 }
 .section5 {
   background: url("images/bg4.png") no-repeat 0 0;
   background-size: cover;
+}
+@media (min-width: 1200px) {
+  .section5:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    opacity: 0.5;
+  }
 }
 @media (min-width: 992px) {
   .section5 .title-wrapper {
@@ -455,6 +563,7 @@ body {
   }
 }
 .section5 .row {
+  padding-top: 30px;
   padding-bottom: 40px;
 }
 @media (min-width: 992px) {
@@ -477,23 +586,34 @@ body {
 }
 .section5 .row .right p {
   color: #fff;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 300;
-  line-height: 26px;
+}
+@media (min-width: 992px) {
+  .section5 .row .right p {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 .section5 .row .right .icon {
   width: 32px;
   height: 32px;
   margin-right: 12px;
+  flex-shrink: 0;
 }
-.section5 .row .right a {
+.section5 .row .right a, .section5 .row .right span {
   color: #fff;
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 33px;
+  font-size: 16px;
+  font-weight: 100;
   text-decoration: none;
   display: flex;
   align-items: center;
+}
+@media (min-width: 992px) {
+  .section5 .row .right a, .section5 .row .right span {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 .section5 .row .right .phone {
   margin: 22px 0 15px 0;
@@ -503,8 +623,19 @@ body {
     margin: 42px 0 35px 0;
   }
 }
+.section5 .row .right .addr {
+  margin: 0 0 15px 0;
+}
+@media (min-width: 992px) {
+  .section5 .row .right .addr {
+    margin: 0 0 35px 0;
+  }
+}
 .section5 .form-title {
   display: none;
+}
+.section5 .contact_form {
+  max-width: 500px;
 }
 .section5 input {
   border: 1px solid #c4c4c4;
@@ -571,6 +702,12 @@ body {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .bg-vid {
+    display: block;
+  }
 }
 .modal {
   z-index: 99999;
@@ -834,4 +971,4 @@ div.wpcf7-response-output {
 .site-footer {
   background: #000;
 }
-/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22%5C%2F%22%2C%22sources%22%3A%5B%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fstyle.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2F_normalize.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_layout.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_modal.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_forms.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_header.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_footer.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAD%3B%3BGAAA%3BACAA%3BAAAA%3B%3B%3B%3B%3B2BAAA%3BAAAA%3BADAA%2CiDAAA%3BACsBC%3BAAAA%2CiBAAA%3BAAAA%3BAAKA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAMA%3BAAAA%2CmBAAA%3BAAAA%3BAAIA%3BAAAA%2CeAAA%3BAAAA%3BAAIA%3BAAAA%3BgBAAA%3BAAAA%3BAAMA%3BAAAA%3BoBAAA%3BAAAA%3BAAKA%3BAAAA%3B%3B%3B%3B%3B%3B%3BqBAAA%3BAAAA%3BAAmBA%3BAAAA%2CyBAAA%3BAAAA%3BACvED%3BAAAA%2CoCAAA%3BAAAA%3BAAIC%3BAAAA%3B%3BiBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%2CeAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3B2BAAA%3BAAAA%3BAAAA%3BAAUF%3BAAAA%3BqBAAA%3BAAAA%3BAAIE%3BAAAA%3BaAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3B%3B%3B%3BeAAA%3BAAAA%3BAAAA%3BAASF%3BAAAA%3B%3B%3B%3BiBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CiBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3BoBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%2CqBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%3B%3B%3BuBAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3BiBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B%3B%3BsBAAA%3BAAAA%3BAAQE%3BAAAA%3BAAAA%3BsBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B%3B%3B%3BgBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%2CkBAAA%3BAAAA%3BAAAA%3BAAON%3BAAAA%3ByBAAA%3BAAAA%3BAAIE%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BeAAA%3BAAAA%3BAAYA%3BAAAA%3B%3B%3B%3B%3B%3BmBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAQA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3B%3B%3BsBAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%3BqBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3BcAAA%3BAAAA%3BAAQF%3BAAAA%3B%3B%3B0BAAA%3BAAAA%3BAAOI%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BoBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3BoBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3BqBAAA%3BAAAA%3BAAME%3BAAAA%2C0CAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CkBAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3B%3B%3BkCAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3B%3B%3B%3B4BAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3BkBAAA%3BAAAA%3BAAIE%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAOF%3BAAAA%3B%3B%3B%3B%3B%3BkBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3B%3B%3B%3BiBAAA%3BAAAA%3BAAAA%3BAASA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAASN%3BAAAA%3ByBAAA%3BAAAA%3BAAIE%3BAAAA%2CoBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BuBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3BkBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3BcAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAOF%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3B%3B0BAAA%3BAAAA%3BAAKE%3BAAAA%2CoBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BuBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3BkBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3BcAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAQJ%3BAAAA%3ByBAAA%3BAAAA%3BAAKI%3BAAAA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%2CuBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%3B%2BBAAA%3BAAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%3BwBAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3BAAAA%3BuBAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3B%3B%3BoBAAA%3BAAAA%3BAAOA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3B%3B%3BsBAAA%3BAAAA%3BAAUA%3BAAAA%2CwBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%2C0BAAA%3BAAAA%3BAAAA%3BAAON%3BAAAA%2CgBAAA%3BAAAA%3BAAIA%3BAAAA%3B%3B0CAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAQA%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BoBAAA%3BAAAA%3BAAeF%3BAAAA%3B%3B%3B%3B%3BqBAAA%3BAAAA%3BAASA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%3BwBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B4BAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%2CoBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3B%3B%3B%3BmBAAA%3BAAAA%3BAC9iBD%3BAAAA%2CiBAAA%3BAAAA%3BAAGG%3BAAAA%3BcAAA%3BAAAA%3BAAIE%3BAAAA%3B%3B%3B%3B%3B%3B%3B8BAAA%3BAAAA%3BAAWA%3BAAAA%3B%3B%3B%3BkBAAA%3BAAAA%3BAAQA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3B%3B%3BkBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3B%3B%3BkBAAA%3BAAAA%3BAAAA%3BAAQF%3BAAAA%3B%3B%3B%3B4BAAA%3BAAAA%3BAAQA%3BAAAA%3B%3BiBAAA%3BAAAA%3BAAOA%3BAAAA%2CsBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%3BwBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BgBAAA%3BAAAA%3BAAaF%3BAAAA%3BeAAA%3BAAAA%3BAAIE%3BAAAA%3B%3B%3B%3BkBAAA%3BAAAA%3BAAOE%3BAAAA%3BeAAA%3BAAAA%3BAAQF%3BAAAA%2CiBAAA%3BAAAA%3BAAOE%3BAAAA%2C2BAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%2CiBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BsBAAA%3BAAAA%3BAAWE%3BAAAA%3BAAAA%3B%3BwBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3B%3BkBAAA%3BAAAA%3BAAQE%3BAAAA%3BAAAA%3BiBAAA%3BAAAA%3BAAAA%3BAAOJ%3BAAAA%3B%3B%3B%3B%3B%3B%3BoBAAA%3BAAAA%3BAAUE%3BAAAA%3BAAAA%3BiBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%2CqBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%3BkBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3BoBAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%3B%3BwBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3BoBAAA%3BAAAA%3BAAQA%3BAAAA%2CsBAAA%3BAAAA%3BAAIA%3BAAAA%2CmBAAA%3BAAAA%3BAAGE%3BAAAA%3B%3B%3BiBAAA%3BAAAA%3BAAUF%3BAAAA%3BAAAA%3BuBAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3B%3B%3B%3B4BAAA%3BAAAA%3BAAQA%3BAAAA%2C4BAAA%3BAAAA%3BAAIA%3BAAAA%3B%3B%3B%3B%3B0BAAA%3BAAAA%3BAAaN%3BAAAA%3B%3B%3B%3B%3B%3BgBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3BkBAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%2CgBAAA%3BAAAA%3BACxQA%3BAAAA%2CiBAAA%3BAAAA%3BAAIA%3BAAAA%2CcAAA%3BAAAA%3BAAMF%3BAAAA%2CoCAAA%3BAAAA%3BAAIA%3BAAAA%2CgBAAA%3BAAAA%3BAAIA%3BAAAA%2C2BAAA%3BAAAA%3BAAIA%3BAAAA%3B%3B%3BsBAAA%3BAAAA%3BACvBD%3BAAAA%2CsBAAA%3BAAAA%3BACAA%3BAAAA%2CmBAAA%3BAAAA%22%7D */
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sourceRoot%22%3A%22%5C%2F%22%2C%22sources%22%3A%5B%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fstyle.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2F_normalize.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_layout.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_modal.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_forms.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_header.scss%22%2C%22D%3A%5C%2FOSPanel%5C%2Fdomains%5C%2Fapf-group%5C%2Fwp-content%5C%2Fthemes%5C%2Fapf-group%5C%2Fsass%5C%2Fcomponents%5C%2F_footer.scss%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22AAAD%3B%3BGAAA%3BACAA%3BAAAA%3B%3B%3B%3B%3B2BAAA%3BAAAA%3BADAA%2CiDAAA%3BACuBC%3BAAAA%2CiBAAA%3BAAAA%3BAAKA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAOA%3BAAAA%2CmBAAA%3BAAAA%3BAAIA%3BAAAA%2CeAAA%3BAAAA%3BAAIA%3BAAAA%3BgBAAA%3BAAAA%3BAAMA%3BAAAA%3BoBAAA%3BAAAA%3BAAKA%3BAAAA%3B%3B%3B%3B%3B%3B%3BqBAAA%3BAAAA%3BAAmBA%3BAAAA%2CyBAAA%3BAAAA%3BACzED%3BAAAA%2CoCAAA%3BAAAA%3BAAIC%3BAAAA%3B%3BiBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%2CeAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3B2BAAA%3BAAAA%3BAAAA%3BAAUF%3BAAAA%3B%3BmBAAA%3BAAAA%3BAAKE%3BAAAA%3BaAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3B%3B%3B%3BeAAA%3BAAAA%3BAAAA%3BAASF%3BAAAA%3B%3B%3B%3BiBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CiBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3BoBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%2CqBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%3B%3B%3BuBAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3BsBAAA%3BAAAA%3BAAKA%3BAAAA%2CgBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%3BsBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3BiBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3BwBAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%3BsBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B%3B%3B%3BgBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%2CkBAAA%3BAAAA%3BAAAA%3BAAON%3BAAAA%3ByBAAA%3BAAAA%3BAAIE%3BAACE%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BiBAAA%3BAAAA%3BAAAA%3BAAaF%3BAAAA%3B%3B%3B%3B%3B%3BmBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAQA%3BAAAA%3B%3B%3B%3BkBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CyBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3BsBAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%3BqBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3BcAAA%3BAAAA%3BAAQF%3BAAAA%3B%3ByBAAA%3BAAAA%3BAAKE%3BAACE%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BiBAAA%3BAAAA%3BAAAA%3BAAcA%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3B%3BaAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3BoBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B%3BsCAAA%3BAAAA%3BAASE%3BAAAA%2C0CAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3BsBAAA%3BAAAA%3BAAIE%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3BAAAA%3B%3BgBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BmCAAA%3BAAAA%3BAAAA%3BAAYA%3BAAAA%3B%3B%3B%3B4BAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BkBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%2CoBAAA%3BAAAA%3BAAAA%3BAAIA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3BsBAAA%3BAAAA%3BAAAA%3BAAOJ%3BAAAA%3B%3B%3B%3B%3B%3BkBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3BoBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAASN%3BAAAA%3ByBAAA%3BAAAA%3BAAIE%3BAACE%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BiBAAA%3BAAAA%3BAAAA%3BAAaF%3BAAAA%2CoBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BuBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3B%3BkBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BcAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3BgBAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAOF%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAMJ%3BAAAA%3ByBAAA%3BAAAA%3BAAIE%3BAAAA%2CoBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BuBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BcAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%2CwBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3BsBAAA%3BAAAA%3BAAOA%3BAAAA%2CmBAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3BqBAAA%3BAAAA%3BAAME%3BAAAA%3B%3BoBAAA%3BAAAA%3BAAOF%3BAAAA%3B%3BwBAAA%3BAAAA%3BAAKE%3BAAAA%2CwBAAA%3BAAAA%3BAAMJ%3BAAAA%3ByBAAA%3BAAAA%3BAAIE%3BAACE%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BiBAAA%3BAAAA%3BAAAA%3BAAcA%3BAAAA%3BAAAA%3B%3BqBAAA%3BAAAA%3BAAAA%3BAAOF%3BAAAA%3BuBAAA%3BAAAA%3BAAIE%3BAAAA%3BAAAA%3B%2BBAAA%3BAAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%3BwBAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%3BAAAA%3BuBAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3B%3BmBAAA%3BAAAA%3BAAKE%3BAAAA%3BAAAA%3BsBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3BiBAAA%3BAAAA%3BAAOA%3BAAAA%3B%3B%3B%3B%3BsBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3BsBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%2CwBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%2C0BAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%2CqBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%2CuBAAA%3BAAAA%3BAAAA%3BAAON%3BAAAA%2CgBAAA%3BAAAA%3BAAIA%3BAAAA%2CmBAAA%3BAAAA%3BAAIA%3BAAAA%3B%3B0CAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAQA%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BoBAAA%3BAAAA%3BAAeF%3BAAAA%3B%3B%3B%3B%3BqBAAA%3BAAAA%3BAASA%3BAAAA%3B%3B%3B%3BsBAAA%3BAAAA%3BAAOE%3BAAAA%3BAAAA%3BwBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B4BAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%2CoBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3B%3B%3B%3B%3BgBAAA%3BAAAA%3BAAUE%3BAAAA%3BAAAA%2CmBAAA%3BAAAA%3BAAAA%3BACnsBH%3BAAAA%2CiBAAA%3BAAAA%3BAAGG%3BAAAA%3BcAAA%3BAAAA%3BAAIE%3BAAAA%3B%3B%3B%3B%3B%3B%3B8BAAA%3BAAAA%3BAAWA%3BAAAA%3B%3B%3B%3BkBAAA%3BAAAA%3BAAQA%3BAAAA%3B%3BsBAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3B%3B%3BkBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3B%3B%3BkBAAA%3BAAAA%3BAAAA%3BAAQF%3BAAAA%3B%3B%3B%3B4BAAA%3BAAAA%3BAAQA%3BAAAA%3B%3BiBAAA%3BAAAA%3BAAOA%3BAAAA%2CsBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%3BwBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BgBAAA%3BAAAA%3BAAaF%3BAAAA%3BeAAA%3BAAAA%3BAAIE%3BAAAA%3B%3B%3B%3BkBAAA%3BAAAA%3BAAOE%3BAAAA%3BeAAA%3BAAAA%3BAAQF%3BAAAA%2CiBAAA%3BAAAA%3BAAOE%3BAAAA%2C2BAAA%3BAAAA%3BAAQA%3BAAAA%3BAAAA%2CiBAAA%3BAAAA%3BAAAA%3BAAKF%3BAAAA%3B%3B%3B%3B%3B%3B%3B%3BsBAAA%3BAAAA%3BAAWE%3BAAAA%3BAAAA%3B%3BwBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3B%3BkBAAA%3BAAAA%3BAAQE%3BAAAA%3BAAAA%3BiBAAA%3BAAAA%3BAAAA%3BAAOJ%3BAAAA%3B%3B%3B%3B%3B%3B%3BoBAAA%3BAAAA%3BAAUE%3BAAAA%3BAAAA%3BiBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%2CqBAAA%3BAAAA%3BAAGE%3BAAAA%3BAAAA%3BkBAAA%3BAAAA%3BAAAA%3BAAMF%3BAAAA%3B%3B%3BoBAAA%3BAAAA%3BAAME%3BAAAA%3BAAAA%3B%3BwBAAA%3BAAAA%3BAAAA%3BAAMA%3BAAAA%3B%3B%3B%3BoBAAA%3BAAAA%3BAAQA%3BAAAA%2CsBAAA%3BAAAA%3BAAIA%3BAAAA%2CmBAAA%3BAAAA%3BAAGE%3BAAAA%3B%3B%3BiBAAA%3BAAAA%3BAAUF%3BAAAA%3BAAAA%3BuBAAA%3BAAAA%3BAAAA%3BAAKA%3BAAAA%3B%3B%3B%3B4BAAA%3BAAAA%3BAAQA%3BAAAA%2C4BAAA%3BAAAA%3BAAIA%3BAAAA%3B%3B%3B%3B%3B0BAAA%3BAAAA%3BAAaN%3BAAAA%3B%3B%3B%3B%3B%3BgBAAA%3BAAAA%3BAASE%3BAAAA%3BAAAA%3BkBAAA%3BAAAA%3BAAAA%3BAAOA%3BAAAA%2CgBAAA%3BAAAA%3BACxQA%3BAAAA%2CiBAAA%3BAAAA%3BAAIA%3BAAAA%2CcAAA%3BAAAA%3BAAMF%3BAAAA%2CoCAAA%3BAAAA%3BAAIA%3BAAAA%2CgBAAA%3BAAAA%3BAAIA%3BAAAA%2C2BAAA%3BAAAA%3BAAIA%3BAAAA%3B%3B%3BsBAAA%3BAAAA%3BACvBD%3BAAAA%2CsBAAA%3BAAAA%3BACAA%3BAAAA%2CmBAAA%3BAAAA%22%7D */

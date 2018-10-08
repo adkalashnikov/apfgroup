@@ -74,6 +74,20 @@ body {
       margin: 0 0 0 auto;
     }
 
+    .phones {
+      display: flex;
+      align-items: center;
+    }
+
+    .phone2 {
+      display: none;
+
+      @media (min-width: 1200px) {
+        display: block;
+        margin-left: 30px;
+      }
+    }
+
     .icon-icon-call {
       width: 22px;
       height: 22px;
@@ -90,8 +104,6 @@ body {
       font-size: 16px;
       font-weight: 500;
       text-decoration: none;
-      display: flex;
-      align-items: center;
 
       @media (min-width: 992px) {
         font-size: 24px;
@@ -500,6 +512,16 @@ body {
       font-size: 14px;
       font-weight: 300;
       line-height: 19px;
+    }
+  }
+  
+  .copy-link {
+    color: #fff;
+    margin-top: 20px;
+    display: inline-block;
+    
+    &:hover {
+        text-decoration: none;
     }
   }
 }

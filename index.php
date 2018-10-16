@@ -308,11 +308,9 @@ get_header();
 
         <div class="items-wrapper">
             <div class="item">
-                <p>
 				    <?php if( get_field('s4-item1') ) {
 					    the_field('s4-item1');
 				    } ?>
-                </p>
             </div>
             <div class="item">
 	            <?php if( get_field('s4-item2') ) {
